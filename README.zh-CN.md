@@ -1,4 +1,3 @@
-
 # vite-quality-starter
 
 这是一个 Vite 入门模板，集成了 Vue.js 和 TypeScript，并预先配置了多种代码质量工具，以确保代码的一致性和可维护性。
@@ -25,11 +24,13 @@
 ## 快速上手
 
 1. **安装依赖**:
+
    ```bash
    pnpm install
    ```
 
 2. **运行开发服务器**:
+
    ```bash
    pnpm dev
    ```
@@ -51,17 +52,19 @@ Husky 用于管理 Git 钩子。项目中配置了一个 `pre-commit` 钩子，�
 
 ### Commitizen
 
-Commitizen 用于强制使用规范化的提交信息。请使用以下命令替代 `git commit`：
+Commitizen 用于强制使用规范化的提交信息。如果全局安装了Commitizen，请使用以下命令替代 `git commit`：
 
 ```bash
 git cz
 ```
 
+如果Commitizen没有全局安装而是像项目一样是作为开发依赖局部安装，可以通过`packages.json`的`scripts`中的脚本`cz`，使用`pnpm run cz`代替`git cz`
+
 该命令会通过一系列交互式问题，引导你生成符合规范的提交信息。关于提交信息格式的更多细节，请参考 [Conventional Commits](https://www.conventionalcommits.org/) 规范。
 
 简单来说，格式如下：
 
-```
+```text
 <type>[optional scope]: <description>
 
 [optional body]
@@ -77,7 +80,7 @@ git cz
 
 以下是一个有效的提交信息示例：
 
-```
+```text
 feat(button): 添加新的波纹效果
 
 - 为按钮组件添加新的波纹效果。
