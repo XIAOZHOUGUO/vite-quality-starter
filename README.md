@@ -24,11 +24,13 @@ This project includes a recommended VS Code settings file at `.vscode/settings.j
 ## Getting Started
 
 1. **Install dependencies**:
+
    ```bash
    pnpm install
    ```
 
 2. **Run the development server**:
+
    ```bash
    pnpm dev
    ```
@@ -56,11 +58,13 @@ Commitizen is used to enforce conventional commit messages. To use it, run the f
 git cz
 ```
 
+If Commitizen is not globally installed but is installed as a development dependency like in this project, you can use `pnpm run cz` instead of `git cz` via the `cz` script in `packages.json`'s `scripts`.
+
 This will prompt you with a series of questions to generate a conventional commit message. For more details on the commit message format, please refer to the [Conventional Commits](https://www.conventionalcommits.org/) specification.
 
 In short, the format is:
 
-```
+```text
 <type>[optional scope]: <description>
 
 [optional body]
